@@ -1,0 +1,55 @@
+create table Contract (
+	ContractID INT           NOT NULL    IDENTITY    PRIMARY KEY,
+	ContractReferenceNumber int NULL, 
+	ContractorReferenceID  int  NULL, 
+	ContractLogID  int  NULL, 
+	ParentContractLogID  int  NULL, 
+	isApproved bit  NULL
+	)
+
+create table NewContractTable
+(
+	NewContractID INT           NOT NULL    IDENTITY    PRIMARY KEY,
+	ContractorReferenceID int null,
+	ContactReferenceNumber int null,
+	documentReferebceNumber  int null,
+	ContractLogID varchar(10) NULL,
+	AgreementType varchar(10) NULL,
+	GrantDEtails varchar(10) NULL,
+	)
+	 
+create table Renewal(
+	RenewalContractID INT           NOT NULL    IDENTITY    PRIMARY KEY,
+	ContractorReferenceID int null,
+	ContactReferenceNumber int null,
+	documentReferebceNumber  int null,
+	ContractLogID varchar(10) NULL,
+	AgreementType varchar(10) NULL,
+	PriorContractLogID varchar(10) NULL,
+	PriorContractAmount numeric(10,3) NULL
+
+	)
+ 
+
+create table AmendContract(
+	AmendContractID  INT           NOT NULL    IDENTITY    PRIMARY KEY,
+	ContractorReferenceID int null,
+	ContractReferenceNumber  int null,
+	documentReferebceNumber  int null,
+	ContractLogID varchar(10) null,
+	AgreementType  varchar(10) null,
+	ChangeAddServices bit null,
+	ChangeFundingIncDec bit null,
+	RevisedStartDate datetime null,
+	RevisedEndDate datetime null,
+	Others varchar(max) null
+	)
+
+create table Document (
+	DocumentID   INT           NOT NULL    IDENTITY    PRIMARY KEY,
+	ContractorReferenceID  int null,
+	ContactReferenceNumber   int null,
+	FileName varchar(250) null,
+	FilePath  varchar(250) null,
+	isUploaded bit null
+	)
