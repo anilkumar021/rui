@@ -1,0 +1,38 @@
+create table  RFP (
+	[RFPID] [int] IDENTITY(1,1) Primary key NOT NULL,
+	ContractorReferenceID  int null,
+	ContactReferenceNumber   int null,
+	[IsContractRFPType] [bit] NULL,
+	[IsContractRFPBid] [bit] NULL,
+	[EnterDateofLastRFP] [datetime] NULL,
+	[RFPDate] [datetime] NULL,
+	[RDPLogNumber] [varchar](max) NULL,
+	[Is3orMoreBidsRecevied] [bit] NULL,
+	[IsRPFAdvinPublication] [bit] NULL,
+	[RPFJustification] [varchar](max) NULL,
+	[TotalYearsContract] [int] NULL,
+	[SoleSourceJustification] [varchar](max) NULL,
+	[UploadDocument] [int] NULL,
+	[documentReferenceNumber] [int] NULL)
+
+
+	create table MUD (
+	MUDID INT           NOT NULL    IDENTITY    PRIMARY KEY,
+	ContractorReferenceID  int null,
+	ContactReferenceNumber   int null,
+	[IsAgreementforStateService] [bit] NULL,
+	[EssentialStateServiceType] [varchar](max) NULL,
+	[DPHContractServiceDescroptiom] [varchar](max) NULL,
+	[FundType] [varchar](max) NULL,
+	[CompensationDescription] [varchar](max) NULL,
+	[IsDepartmentContractedptherPrior2years] [bit] NULL,
+	[NameOfPrevContractor] [varchar](max) NULL,
+	[NameOfPrevContractTerm] [varchar](max) NULL,
+	[NameOfPrevContractFromDate] [datetime] NULL,
+	[NameOfPrevContractToDate] [datetime] NULL,
+	[NameOfPrevContractAmount] [numeric](10, 4) NULL,
+	[IsOngoingService] [bit] NULL,
+	[IsScopeAuditingServices] [bit] NULL,
+	[IsRequesterVerified] [bit] NULL
+	)
+
