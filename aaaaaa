@@ -1,0 +1,41 @@
+Contract
+	ContractID
+	ContractReferenceNumber
+	ContractorReferenceID
+	ContractLogID
+	ParentID
+	isApproved
+
+NewContractTable
+	ContractorReferenceID
+	ContactReferenceNumber
+	documentReferebceNumber
+	ContreadNumber
+	AgreementType
+	GrantDEtails
+	 
+Renewal
+	ContactReferenceNumber
+	PrevContractID
+	ContractID
+	AgreementType
+	documentReferebceNumber
+	ContractWorkDeskrotion
+
+Amend
+	ContractorReferenceID
+	ContractReferenceNumber
+	AmendID
+	AgreementType
+	GrantDEtails
+	documentReferebceNumber
+	ContractWorkDeskrotion
+
+DocumentTYpe
+	ContractorReferenceID
+	ContactReferenceNumber
+	DocumentReferenceNumber
+	ContreadNumber
+	documentID
+	File
+	isUploaded
