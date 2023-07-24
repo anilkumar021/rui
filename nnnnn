@@ -1,0 +1,29 @@
+create table LeaderShipApproval (
+	LeaderShipApprovalID int primary key identity(1,1) Not null,
+	ContractorReferenceID int null,
+	ContractReferenceNumber	 int null,
+	documentReferenceNumber	 int null,
+	isApprove bit null,
+	Comment varchar(100) null,
+	IsApprovalEmailSent  bit null
+	)
+
+create table LegalApproval (
+	LegalApprovalID int primary key identity(1,1) Not null,
+	ContractorReferenceID int null,
+	ContractReferenceNumber	 int null,
+	documentReferenceNumber	 int null,
+	isApprove bit null,
+	Comment varchar(100) null,
+	IsApprovalEmailSent  bit null
+	)
+
+create table FiscalApproval (
+	FiscalApprovalID int primary key identity(1,1) Not null,
+	ContractorReferenceID int null,
+	ContractReferenceNumber	 int null,
+	documentReferenceNumber	 int null,
+	isApprove bit null,
+	Comment varchar(100) null,
+	IsApprovalEmailSent  bit null
+	)
